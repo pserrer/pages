@@ -1,8 +1,9 @@
 name: Deploy Pages (privacy policy)
 
-# Publishes the docs/ folder to GitHub Pages so the privacy policy has a stable
-# public URL for the Play Store listing:
-#   https://pserrer.github.io/game/privacy.html
+# Publishes the docs/ folder to GitHub Pages so the privacy policies have stable
+# public URLs for the Play Store listings:
+#   https://pserrer.github.io/pages/privacy.html        (Owsley's Odyssey)
+#   https://pserrer.github.io/pages/yours/privacy.html  (Yours,)
 on:
   push:
     branches: [main]

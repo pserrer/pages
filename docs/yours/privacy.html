@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Yours,</title>
+  <style>
+    :root {
+      --bg: #ffffff; --fg: #1a1c24; --muted: #5a5f6e; --card: #f4f5f8;
+      --accent: #2f6fed; --border: #e2e5ec;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1117; --fg: #e6e8ee; --muted: #9aa0b0; --card: #171a22;
+        --accent: #6ea0ff; --border: #262a35;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65; -webkit-text-size-adjust: 100%;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 40px 20px 72px; }
+    h1 { font-size: 1.9rem; margin: 0 0 4px; }
+    h2 { font-size: 1.2rem; margin: 34px 0 10px; }
+    p, li { color: var(--fg); }
+    .updated { color: var(--muted); font-size: 0.92rem; margin-top: 0; }
+    a { color: var(--accent); overflow-wrap: anywhere; }
+    ul { padding-left: 22px; }
+    li { margin: 6px 0; }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px 20px; margin: 22px 0;
+    }
+    footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
+    code { background: var(--card); border: 1px solid var(--border); border-radius: 5px; padding: 1px 5px; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Yours, · Last updated 1 October 2026</p>
+
+    <p>
+      This Privacy Policy describes how the Android email app <strong>Yours,</strong>
+      (Android package <code>com.pserrer.mail</code>) handles information.
+    </p>
+
+    <div class="card">
+      <strong>In short:</strong> Yours, is an email app that talks directly to your email provider. There is no server of ours in between: we never receive your email, your password, your contacts or anything about how you use the app. There are no ads, no analytics and no tracking, and nothing is sold to anyone.
+    </div>
+
+    <h2>What stays on your phone</h2>
+    <ul>
+      <li>Your email. Messages are fetched from your provider over IMAP and kept in a database on your phone so they open instantly and work offline. Mail you send goes from your phone to your provider over SMTP.</li>
+      <li>Your passwords. Account passwords are kept in Android’s encrypted secure storage and are only ever sent to the mail servers of the account they belong to.</li>
+      <li>Your settings, the senders you approved or blocked in the Screener, snoozes, rules and drafts.</li>
+      <li>Your phone contacts, only if you turn on “Use phone contacts”. They are read on the phone to let people you know straight into your inbox and are not sent anywhere.</li>
+      <li>The on-device assistant, only if you turn it on. Summaries, suggested replies, sender explanations and text improvements are produced by the model built into your phone (Gemini Nano, through Android AICore). The text it works on stays on the phone.</li>
+    </ul>
+
+    <h2>When the app talks to anyone else</h2>
+    <p>Besides your own mail servers, the app makes network requests only in these cases:</p>
+    <ul>
+      <li>Setting up an account. To find your provider’s server settings, the app asks your email domain’s own servers (for example autoconfig.yourdomain.com), which can see your email address.</li>
+      <li>Sender pictures, only if you turn on “Show real avatars” (off by default). The app looks up a picture for a sender on Gravatar (which receives a hash of the sender’s address), on the sender’s own website, and through a DNS lookup of the sender’s domain via Cloudflare’s DNS service.</li>
+      <li>Images inside messages, only when you choose to load them for a message or a sender, or turn on “Load remote content”. The sender’s servers then see that the message was opened, from which IP address and with which device.</li>
+      <li>Unsubscribing. When you tap Unsubscribe, the app contacts the address the sender provided for that purpose.</li>
+      <li>App updates. The app checks Expo’s update service (operated by 650 Industries, Inc.) for new versions. That request contains the app version, the platform and a random installation identifier, and the service sees your IP address. It contains nothing about your mail.</li>
+      <li>Links you open, which open in your browser.</li>
+    </ul>
+
+    <h2>What you can choose to send us</h2>
+    <p>Nothing reaches us unless you send it. Two places in the app prepare something for you to send, and both show you exactly what it contains first:</p>
+    <ul>
+      <li>Reporting generated text. “Report” under anything the assistant wrote opens a draft email to <a href="mailto:playstore@serrer.de">playstore@serrer.de</a> with that text and the app version. It does not include the message the text was generated from. It is sent from your own account, like any other email, only when you press Send.</li>
+      <li>Crash reports. If the app crashes, it can show a report of the error and the app version, which you can share however you like. It contains no email content.</li>
+    </ul>
+    <p>If you email us, we use your message only to reply and to fix the problem, and delete it when it is no longer needed.</p>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li>Internet, to reach your mail servers and the services above.</li>
+      <li>Notifications, to tell you about new mail from approved senders, snoozed mail and follow-up reminders.</li>
+      <li>Alarms, so snoozed mail and reminders arrive at the time you chose.</li>
+      <li>Running in the background and an optional persistent connection, so new mail arrives while the app is closed.</li>
+      <li>Contacts, only if you turn on “Use phone contacts” or add a sender to your contacts.</li>
+    </ul>
+
+    <h2>Deleting your data</h2>
+    <p>Removing an account in Settings deletes its mail, settings and password from the phone. Uninstalling the app deletes everything it stored. Your mail itself stays with your provider, as it always was.</p>
+
+    <h2>Children</h2>
+    <p>The app is not directed at children under 13.</p>
+
+    <h2>Changes and contact</h2>
+    <p>If this policy changes, the new version will be published here and in the app, with a new date.</p>
+    <p>Questions about privacy: <a href="mailto:playstore@serrer.de">playstore@serrer.de</a></p>
+
+    <footer>
+      This policy applies to the Yours, Android app only. The same text is shown
+      in the app under Settings → Privacy policy.
+    </footer>
+  </main>
+</body>
+</html>
