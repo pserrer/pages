@@ -7,6 +7,7 @@ Public pages served by GitHub Pages from `docs/` (deployed by
 | --- | --- |
 | Owsley's Odyssey — privacy policy | https://pserrer.github.io/pages/privacy.html |
 | Yours, — privacy policy | https://pserrer.github.io/pages/yours/privacy.html |
+| Inboki — privacy policy | https://pserrer.github.io/pages/inboki/privacy.html |
 
 The Yours, policy is rendered from `src/lib/privacy-policy.ts` in
 `pserrer/mail`, which is the binding text the app shows in Settings. When that
