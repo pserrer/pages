@@ -12,3 +12,6 @@ Public pages served by GitHub Pages from `docs/` (deployed by
 The Yours, policy is rendered from `src/lib/privacy-policy.ts` in
 `pserrer/mail`, which is the binding text the app shows in Settings. When that
 file changes, update `docs/yours/privacy.html` to match.
+
+The Inboki policy is rendered the same way from `src/lib/privacy-policy.ts` in
+`pserrer/collector`; update `docs/inboki/privacy.html` when that file changes.

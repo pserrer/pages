@@ -24,64 +24,90 @@
     main { max-width: 720px; margin: 0 auto; padding: 40px 20px 72px; }
     h1 { font-size: 1.9rem; margin: 0 0 4px; }
     h2 { font-size: 1.2rem; margin: 34px 0 10px; }
-    p { color: var(--fg); }
-    li { color: var(--fg); margin: 6px 0; }
-    .muted { color: var(--muted); }
+    p, li { color: var(--fg); }
+    .updated { color: var(--muted); font-size: 0.92rem; margin-top: 0; }
     a { color: var(--accent); overflow-wrap: anywhere; }
     ul { padding-left: 22px; }
+    li { margin: 6px 0; }
     .card {
       background: var(--card); border: 1px solid var(--border);
       border-radius: 12px; padding: 16px 20px; margin: 22px 0;
     }
-    footer {
-      margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border);
-      color: var(--muted); font-size: 0.9rem;
-    }
+    footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
+    code { background: var(--card); border: 1px solid var(--border); border-radius: 5px; padding: 1px 5px; font-size: 0.9em; }
   </style>
 </head>
 <body>
   <main>
     <h1>Privacy Policy</h1>
-    <p class="muted">Inboki · Last updated 18 October 2026</p>
+    <p class="updated">Inboki · Last updated 18 October 2026</p>
+
+    <p>
+      This Privacy Policy describes how the Android app <strong>Inboki</strong>
+      (Android package <code>com.pserrer.collector</code>) handles information.
+    </p>
 
     <div class="card">
-      Inboki lets you post links and fetches their content directly on your
-      device. We do not collect your information or store it on our servers.
+      <strong>In short:</strong> Inboki keeps what you share with it on your phone. There is no account and no server of ours: we never receive your finds, your paperwork, your photos or anything about how you use the app. There are no ads, no analytics and no tracking, and nothing is sold to anyone.
     </div>
 
-    <p>
-      Links you post and content Inboki fetches are stored locally on your
-      device. The app does not send them to us.
-    </p>
+    <h2>What stays on your phone</h2>
+    <ul>
+      <li>What you capture. Links, text, photos and PDFs you share to Inboki, take with its camera or pick from your files are copied into the app’s own storage and kept in a database on your phone, together with your collections, mood boards, lists, plans, titles and notes.</li>
+      <li>What the app reads from them. Text in photos and PDFs is recognised on the phone (Google ML Kit text recognition). For photos, the labels describing what is in them and their main colours are worked out on the phone too (ML Kit image labelling), and the time and place written into the file (EXIF) are read from it.</li>
+      <li>Summaries, only on phones that have the on-device model. They are produced by the model built into your phone (Gemini Nano, through Android AICore); the text it works on stays on the phone. Elsewhere the app picks sentences from the text itself.</li>
+      <li>How finds are sorted. Whether something is paperwork or inspiration, and which of your collections it might belong in, is decided by plain code on the phone, not by a cloud service.</li>
+      <li>Your archive passwords. The Paperless-ngx token and WebDAV password you enter are kept in Android’s encrypted secure storage and are only ever sent to the server they belong to.</li>
+      <li>Your phone calendar, only if you turn it on for the plan. Its appointments are read on the phone to show them on your plan and are not sent anywhere. Inboki never writes to it: adding a date opens your calendar app’s own screen.</li>
+      <li>Where you take photos, only if you turn on “Note where photos are taken”. Your phone’s position is noted when you take a photo with Inboki’s camera, and kept with that photo.</li>
+      <li>Reminders, only if you turn them on. They are scheduled on the phone.</li>
+      <li>A log of what the app did while preparing your finds, such as which address a link led to and what a site answered. It never holds passwords or tokens, stays on the phone and keeps only the newest entries.</li>
+    </ul>
 
-    <h2>Link requests</h2>
-    <p>
-      When Inboki fetches a link, your device connects directly to the linked
-      website. That website may receive information such as your IP address
-      and details included in the request, and may handle it under its own
-      privacy policy.
-    </p>
+    <h2>When the app talks to anyone else</h2>
+    <p>Inboki goes online only in these cases. Each of them sees your IP address, as any website you visit does:</p>
+    <ul>
+      <li>Links you share. To show a card with picture, title and text, the app fetches the page you shared and its preview picture from the site it belongs to, or the file, if the link is a PDF. For YouTube and TikTok it also asks their oEmbed service about the link, and for Reddit it asks old.reddit.com for the post. These sites see which page was asked for.</li>
+      <li>Maps. When a find has a place, the small map is drawn from OpenStreetMap’s tile servers, which see which area is shown. Tapping it opens your own maps app.</li>
+      <li>Place names. To name the place a photo was taken (for example “Lisbon”), the app asks Android’s geocoder, which on most phones sends the photo’s coordinates to Google to look them up.</li>
+      <li>Your archive, only if you set one up. Paperwork is uploaded with its title and date to the Paperless-ngx server or WebDAV folder you entered, signed in with the token or password you gave. Nothing else is uploaded.</li>
+      <li>Reading aloud. Text is read by your phone’s text-to-speech engine. If you choose a voice marked “Needs internet”, that engine sends the text to its provider (for Google’s engine, Google) to speak it; the other voices work on the phone.</li>
+      <li>App updates. The app checks Expo’s update service (operated by 650 Industries, Inc.) for new versions. That request contains the app version, the platform and a random installation identifier. It contains nothing about your finds.</li>
+      <li>Links you open, which open in your browser or the app they belong to.</li>
+    </ul>
 
-    <h2>Storage and deletion</h2>
-    <p>
-      Inboki stores its data on your device, not on our servers. Uninstalling
-      the app removes the data Inboki stored on that device.
-    </p>
+    <h2>What you can choose to send</h2>
+    <p>Nothing reaches us unless you send it. The app only ever hands things to Android’s share sheet, and only when you tap Share:</p>
+    <ul>
+      <li>Finds, lists, collections you present as slides or a picture, and files you open in another app go wherever you share them.</li>
+      <li>Crash reports. If a screen stops working, “Share details” shares a description of the error, the time and the app version, which you can send however you like. It contains none of your finds.</li>
+      <li>The log, if you opened it, can be shared the same way.</li>
+    </ul>
+    <p>If you email us, we use your message only to reply and to fix the problem, and delete it when it is no longer needed.</p>
 
-    <h2>Changes to this policy</h2>
-    <p>
-      We may update this policy from time to time. We will post the updated
-      version here and change the “Last updated” date.
-    </p>
+    <h2>Permissions</h2>
+    <ul>
+      <li>Internet, to fetch the links you share, maps, place names, your archive and updates.</li>
+      <li>Camera, to photograph receipts, letters and anything else you want to keep. Photos are taken only when you press the shutter.</li>
+      <li>Location, only if you turn on “Note where photos are taken”, and only while you use the app.</li>
+      <li>Calendar (read only), only if you turn on the phone calendar for the plan.</li>
+      <li>Notifications and alarms, only if you turn on reminders, so they arrive at the time you chose.</li>
+      <li>Running in the background, so uploads to your archive finish while the app is closed.</li>
+    </ul>
 
-    <h2>Contact</h2>
-    <p>
-      For privacy questions, contact us at
-      <a href="mailto:[privacy contact email]">[privacy contact email]</a>.
-    </p>
+    <h2>Deleting your data</h2>
+    <p>Deleting a find removes it and its file from the phone once the moment to undo it has passed. Uninstalling the app deletes everything it stored, including your archive passwords. What was already uploaded to your archive stays on your server, which is yours.</p>
+
+    <h2>Children</h2>
+    <p>The app is not directed at children under 13.</p>
+
+    <h2>Changes and contact</h2>
+    <p>If this policy changes, the new version will be published here and in the app, with a new date.</p>
+    <p>Questions about privacy: <a href="mailto:playstore@serrer.de">playstore@serrer.de</a></p>
 
     <footer>
-      This policy applies to the Inboki app.
+      This policy applies to the Inboki Android app only. The same text is shown
+      in the app under Settings → Privacy policy.
     </footer>
   </main>
 </body>

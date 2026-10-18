@@ -4,6 +4,7 @@ name: Deploy Pages (privacy policy)
 # public URLs for the Play Store listings:
 #   https://pserrer.github.io/pages/privacy.html        (Owsley's Odyssey)
 #   https://pserrer.github.io/pages/yours/privacy.html  (Yours,)
+#   https://pserrer.github.io/pages/inboki/privacy.html (Inboki)
 on:
   push:
     branches: [main]
