@@ -61,13 +61,15 @@
     <p>Body measurements can be health-related information. Because they never leave your phone through the app, nobody but you and whoever can use your phone can see them. If your phone’s system backup is turned on, Android or iOS may include the app’s data in your device backup, which is handled by your backup provider under their terms.</p>
 
     <h2>When the app talks to anyone else</h2>
-    <p>BRI Tracker does not need the internet and sends nothing about you anywhere. The only exception:</p>
+    <p>BRI Tracker sends nothing about you or your measurements anywhere. It goes online only in these cases, each of which sees your IP address, as any website you visit does:</p>
     <ul>
+      <li>App updates. When it starts, the app checks Expo’s update service (EAS Update, operated by 650 Industries, Inc.) for a new version and downloads it if there is one. That request contains the app and runtime version, the platform, the update channel and a random installation identifier. It contains nothing about your profile or your measurements.</li>
       <li>Links you open. Tapping “Sources” opens the scientific references on PubMed in your browser. That site sees your visit as it would any other.</li>
     </ul>
 
     <h2>Permissions</h2>
     <ul>
+      <li>Internet, to check for and download app updates.</li>
       <li>Notifications, only if you turn on the weekly reminder, so it can arrive on time.</li>
     </ul>
     <p>The app does not ask for your location, contacts, camera, photos or any other personal data on your phone.</p>
