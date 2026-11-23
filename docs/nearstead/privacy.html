@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Nearstead</title>
+  <style>
+    :root {
+      --bg: #ffffff; --fg: #1a1c24; --muted: #5a5f6e; --card: #f4f5f8;
+      --accent: #2f6fed; --border: #e2e5ec;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1117; --fg: #e6e8ee; --muted: #9aa0b0; --card: #171a22;
+        --accent: #6ea0ff; --border: #262a35;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65; -webkit-text-size-adjust: 100%;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 40px 20px 72px; }
+    h1 { font-size: 1.9rem; margin: 0 0 4px; }
+    h2 { font-size: 1.2rem; margin: 34px 0 10px; }
+    p, li { color: var(--fg); }
+    .updated { color: var(--muted); font-size: 0.92rem; margin-top: 0; }
+    a { color: var(--accent); overflow-wrap: anywhere; }
+    ul { padding-left: 22px; }
+    li { margin: 6px 0; }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px 20px; margin: 22px 0;
+    }
+    footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
+    code { background: var(--card); border: 1px solid var(--border); border-radius: 5px; padding: 1px 5px; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Nearstead · Last updated 23 November 2026</p>
+
+    <p>
+      This policy describes how <strong>Nearstead</strong>, the Android app
+      with package name <code>com.pserrer.nearstead</code>, handles information.
+    </p>
+
+    <div class="card">
+      <strong>In short.</strong> Your diary, people, notes and contact history
+      stay on your phone. Nearstead has no app account, no cloud diary sync,
+      no ads, no analytics and no tracking. We do not sell your data.
+      The optional online services are described below.
+    </div>
+
+    <h2>What stays on your phone</h2>
+    <ul>
+      <li><strong>People and notes.</strong> Nearstead stores the people you add,
+        your notes, manually logged contacts and diary entries in an encrypted
+        database (SQLCipher). The encryption key is generated on your device and
+        protected by Android’s Keystore.</li>
+      <li><strong>Contacts.</strong> With permission, Nearstead reads names,
+        phone numbers, email addresses and birthdays for the people you link.
+        It displays address-book photos without copying them and can import newly
+        added numbers or email addresses for linked contacts. If you enable
+        <em>Details from your contacts</em>, it can also import related people,
+        dates, company, job title and town, without reading the street address
+        for this feature. Nearstead does not write to your address book.</li>
+      <li><strong>Phone calls.</strong> After a call you started through
+        Nearstead, you can return to the app and confirm it for your history.</li>
+      <li><strong>Calendar.</strong> With permission, Nearstead reads event times
+        and attendee email addresses in the calendars you select to match
+        meetings to people you know. It does not read event titles, descriptions
+        or locations. A meeting enters your contact history when you confirm it.</li>
+      <li><strong>Photos.</strong> With permission, Nearstead reads accessible
+        photos and their available date and location information to show them
+        on diary days. The images stay in your photo library. Turning off the
+        photo source clears Nearstead’s local photo index.</li>
+      <li><strong>Places and routes.</strong> If you enable the Places source and
+        grant location access, Android records locations, including in the
+        background, to reconstruct visits and routes for your diary. Pending
+        location samples are encrypted before they are imported into your diary.</li>
+      <li><strong>Music and podcasts.</strong> If enabled and notification access
+        is granted, Nearstead reads playback information such as titles and artists
+        from supported Android media sessions to record what you listened to. It
+        does not record the audio.</li>
+      <li><strong>Voice input.</strong> Dictation uses Android’s on-device speech
+        recognition where offline recognition is available. The resulting text
+        is shown for you to review before saving.</li>
+    </ul>
+
+    <h2>Message notifications and on-device AI</h2>
+    <p>
+      When you enable notification access, Nearstead can record who contacted you
+      and when from notifications in apps you choose. Message text is used for
+      suggestions only if you separately turn on <em>Suggest from messages</em>.
+      This covers incoming one-to-one messages. The text is held on the phone
+      until Nearstead next opens and looks for something worth remembering.
+      The original text is then discarded. Suggestions you do not act on expire
+      after two weeks and are excluded from backups. Turning the feature off
+      clears pending suggestions. A suggestion becomes a saved memory only if
+      you accept it.
+    </p>
+    <p>
+      If you enable <em>Suggestions on the phone</em> and your device supports
+      it, Android AICore’s Gemini Nano model processes inputs on the device.
+      Depending on the feature, it can suggest a memory, tidy dictated text,
+      suggest a reminder, describe a diary photo, or write a recap from
+      locally recorded activity. Nearstead does not send those inputs to a
+      cloud AI service. Suggestions that add to your notes or reminders need
+      your confirmation.
+    </p>
+
+    <h2>When Nearstead uses online services</h2>
+    <ul>
+      <li><strong>Maps, place names and weather.</strong> A map requests tiles for
+        the displayed area from the configured map provider, or
+        <a href="https://openfreemap.org/">OpenFreeMap</a> by default. Place
+        searches send the name you enter to the search service. Optional place
+        naming uses Android’s geocoder, which may send coordinates to a network
+        service. When weather is enabled and available, Nearstead sends rounded
+        coordinates to <a href="https://open-meteo.com/">Open-Meteo</a> to
+        retrieve weather for the diary.</li>
+      <li><strong>App updates.</strong> Nearstead uses Expo Application Services
+        (EAS Update) when it checks for and downloads updates. The update service
+        receives technical information such as the app version, a random install
+        identifier and the IP address of the request. Your diary and contact
+        history are not included. See
+        <a href="https://expo.dev/privacy">Expo’s privacy policy</a>.</li>
+      <li><strong>Purchases.</strong> Google Play Billing processes Nearstead
+        purchases, restores them and supplies purchase status. Nearstead keeps
+        your entitlement on the device. Google handles your account and payment
+        information under <a href="https://policies.google.com/privacy">Google’s
+        privacy policy</a>.</li>
+      <li><strong>Opening another app.</strong> When you choose to call, message,
+        or open a search or other link, Nearstead passes the information needed
+        for that action to the app or service you open. A prefilled message is
+        sent only when you send it yourself.</li>
+    </ul>
+
+    <h2>Your choices, backups and deletion</h2>
+    <p>
+      You can turn optional sources and suggestions off in Nearstead or revoke
+      permissions in Android settings. You can delete diary entries, notes and
+      people from the app. When a person is removed, their saved history and
+      notes are removed after the undo period.
+    </p>
+    <p>
+      Android cloud backup is disabled for Nearstead. A backup is created only
+      when you ask for one, encrypted with your passphrase, and saved or shared
+      to the destination you choose. Clearing app storage or uninstalling
+      Nearstead removes the local app data. Backup files and exports you saved
+      elsewhere can be deleted at their destination.
+    </p>
+    <p>
+      You can also enable <em>Lock Nearstead</em>. Android verifies your
+      fingerprint, face or screen lock. Nearstead does not receive or store
+      biometric data or your screen-lock credentials.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>Updates to this policy will appear on this page with a new date.</p>
+
+    <h2>Contact</h2>
+    <p>
+      For privacy questions about Nearstead, email
+      <a href="mailto:playstore@serrer.de">playstore@serrer.de</a>.
+    </p>
+
+    <footer>© 2026 Nearstead. This policy applies to the Nearstead app.</footer>
+  </main>
+</body>
+</html>

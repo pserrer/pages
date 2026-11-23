@@ -9,6 +9,7 @@ Public pages served by GitHub Pages from `docs/` (deployed by
 | Yours, — privacy policy | https://pserrer.github.io/pages/yours/privacy.html |
 | Inboki — privacy policy | https://pserrer.github.io/pages/inboki/privacy.html |
 | BRI Tracker — privacy policy | https://pserrer.github.io/pages/bri/privacy.html |
+| Nearstead — privacy policy | https://pserrer.github.io/pages/nearstead/privacy.html |
 
 The Yours, policy is rendered from `src/lib/privacy-policy.ts` in
 `pserrer/mail`, which is the binding text the app shows in Settings. When that
@@ -16,3 +17,6 @@ file changes, update `docs/yours/privacy.html` to match.
 
 The Inboki policy is rendered the same way from `src/lib/privacy-policy.ts` in
 `pserrer/collector`; update `docs/inboki/privacy.html` when that file changes.
+
+The Nearstead policy follows `PRIVACY.md` and the app’s data handling in
+`pserrer/nearstead`. Update `docs/nearstead/privacy.html` when either changes.
