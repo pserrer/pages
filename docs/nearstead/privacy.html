@@ -40,7 +40,7 @@
 <body>
   <main>
     <h1>Privacy Policy</h1>
-    <p class="updated">Nearstead · Last updated 23 November 2026</p>
+    <p class="updated">Nearstead · Last updated 25 November 2026</p>
 
     <p>
       This policy describes how <strong>Nearstead</strong>, the Android app
@@ -71,8 +71,12 @@
         Nearstead, you can return to the app and confirm it for your history.</li>
       <li><strong>Calendar.</strong> With permission, Nearstead reads event times
         and attendee email addresses in the calendars you select to match
-        meetings to people you know. It does not read event titles, descriptions
-        or locations. A meeting enters your contact history when you confirm it.</li>
+        meetings to people you know. A meeting enters your contact history when
+        you confirm it. If you separately enable <em>Events in the diary</em>,
+        event titles and times from those calendars can also appear in the
+        day’s entry; these titles stay on your phone, are excluded from backups
+        and are removed when you turn the feature or the calendar off.
+        Nearstead does not read event descriptions or locations.</li>
       <li><strong>Photos.</strong> With permission, Nearstead reads accessible
         photos and their available date and location information to show them
         on diary days. The images stay in your photo library. Turning off the
@@ -90,6 +94,39 @@
         is shown for you to review before saving.</li>
     </ul>
 
+    <h2>Sleep and workouts (Health Connect)</h2>
+    <p>
+      <em>Sleep and workouts</em> is off until you turn it on in Nearstead and
+      allow access in Health Connect. Nearstead then reads two kinds of data
+      that your watch or fitness app wrote to Health Connect:
+    </p>
+    <ul>
+      <li><strong>Sleep sessions:</strong> when each sleep started and ended.</li>
+      <li><strong>Exercise sessions:</strong> the kind of workout (for example
+        a run or a swim), when it started and ended, and so its duration.</li>
+    </ul>
+    <p>
+      Nearstead uses this data only to show the night’s sleep and the day’s
+      workouts in your diary, and to let Nori ask about a workout on that day.
+      It does not read heart rate, sleep stages, routes, workout titles or
+      notes, or any other Health Connect data, and it never writes to Health
+      Connect. It reads only while the app is open and does not measure
+      anything itself or give health scores or advice.
+    </p>
+    <p>
+      The data is stored in the encrypted database on your phone and is
+      excluded from backup files. It is never sent to us or to anyone else,
+      never sold, and never used for advertising, profiling, credit or
+      insurance decisions, or to train AI models. Turning <em>Sleep and
+      workouts</em> off deletes everything Nearstead read from Health Connect.
+      You can withdraw access at any time in Health Connect’s settings.
+    </p>
+    <p>
+      Nearstead’s use of information received from Health Connect adheres to
+      the Health Connect Permissions policy, including its Limited Use
+      requirements.
+    </p>
+
     <h2>Message notifications and on-device AI</h2>
     <p>
       When you enable notification access, Nearstead can record who contacted you
@@ -106,8 +143,10 @@
       If you enable <em>Suggestions on the phone</em> and your device supports
       it, Android AICore’s Gemini Nano model processes inputs on the device.
       Depending on the feature, it can suggest a memory, tidy dictated text,
-      suggest a reminder, describe a diary photo, or write a recap from
-      locally recorded activity. Nearstead does not send those inputs to a
+      suggest a reminder, describe a diary photo, write a recap from
+      locally recorded activity, or sum up in two sentences what you noted
+      about someone on their page. A summary is not stored and is checked
+      against your own notes before it is shown. Nearstead does not send those inputs to a
       cloud AI service. Suggestions that add to your notes or reminders need
       your confirmation.
     </p>
